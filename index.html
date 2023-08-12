@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <style>
+      body {
+        height: 100vh;
+      }
+
+      .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .clock {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        background-color: antiquewhite;
+        position: relative;
+      }
+
+      .min {
+        height: 5px;
+        width: 5px;
+        background-color: black;
+        border-radius: 50%;
+        position: absolute;
+      }
+
+      .min::before {
+        transform: translate(-50%, -100%);
+        left: 50%;
+        content: "";
+        position: absolute;
+        height: 40px;
+        width: 3px;
+        background-color: rgb(58, 0, 247);
+      }
+
+      .sec {
+        height: 5px;
+        width: 5px;
+        background-color: black;
+        border-radius: 50%;
+        position: absolute;
+        transform: rotate(20deg);
+      }
+
+      .sec::before {
+        transform: translate(-50%, -100%);
+        left: 50%;
+        content: "";
+        position: absolute;
+        height: 50px;
+        width: 3px;
+        background-color: rgb(133, 242, 0);
+      }
+
+      .hrs {
+        height: 5px;
+        width: 5px;
+        background-color: black;
+        border-radius: 50%;
+        position: absolute;
+        transform: rotate(40deg);
+      }
+
+      .hrs::before {
+        transform: translate(-50%, -100%);
+        left: 50%;
+        content: "";
+        position: absolute;
+        height: 30px;
+        width: 3px;
+        background-color: rgb(242, 24, 0);
+      }
+    </style>
+  </head>
+  <body class="flex-center">
+    <section class="clock flex-center">
+      <div class="min"></div>
+      <div class="sec"></div>
+      <div class="hrs"></div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
